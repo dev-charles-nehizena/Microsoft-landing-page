@@ -1,6 +1,49 @@
 @font-face {
-    font-family: 'poppins';
-    src: url(fonts/Poppins/Poppins-Regular.ttf) format(ttf);
+    font-family: 'poppins-light';
+    src: url(/Poppins/Poppins-light.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins-regular';
+    src: url(/Poppins/Poppins-regular.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins-meduim';
+    src: url(/Poppins/Poppins-Medium.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url(/Poppins/Poppins-bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url(/Poppins/Helvetica.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica-bold';
+    src: url(/Poppins/Helvetica-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+    color: #000;
+}
+
+@font-face {
+    font-family: 'Freesans';
+    src: url(/Poppins/FreeSans.ttf);
     font-weight: bold;
     font-style: normal;
 }
@@ -9,7 +52,6 @@
     padding: 0;
     margin: 0%;
     box-sizing: border-box;
-    font-family: 'poppins';
     scroll-behavior: smooth;
     max-width: 100%;
     transition: .8s all ease;
@@ -28,7 +70,6 @@ li {
 
 a {
     text-decoration: none;
-    font-family: 'poppins';
 }
 
 
@@ -38,11 +79,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5rem;
+    padding: 0rem 4rem;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
+    font-family: 'Helvetica';
     background-color: #ffffff;
     border-bottom: 1px solid #00010113;
 }
@@ -61,14 +103,14 @@ a {
 }
 
 .logo {
-    width: 120px;
+    width: 110px;
 }
 
 .nav-links {
     transition: 0.7s ease;
     color: #262626;
-    font-weight: 300;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 13px;
 }
 
 .hambuger {
@@ -93,8 +135,18 @@ a {
     gap: 1.7rem;
 }
 
-.nav-right img {
-    width: 17px;
+.search-div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add{
+    width: 27px;
+}
+
+.nav-right-img {
+    width: 16px;
 }
 
 .search1 {
@@ -102,14 +154,15 @@ a {
 }
 
 .nav-right a{
-    font-size: 15px;
+    font-size: 13px;
     color: #262626;
-    font-weight: 300;
+    font-weight: 400;
 }
 .nav-left-reponsiveness{
     display: flex;
     align-items: center;
     gap: 1rem;
+    display: none;
 }
 
 .nav-items:before {
@@ -119,13 +172,14 @@ a {
     top: 25px;
     width: 100%;
     height: 4px;
-    background: #f8e53f;
+    background: #262626;
     transform: scaleX(0);
     transform-origin: right;
     transition: 1s;
+    z-index: 9999;
 }
 
-.nav-items:hover:before {
+.nav-links:hover:before {
     transform: scaleX(1);
     transform-origin: left;
 
@@ -141,9 +195,178 @@ a {
 
 
 
+/* BANNER SECTION */
+
+.banner{
+    overflow-x: hidden;
+}
+.banner1{
+    display: flex;
+    padding-top: 70px;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    background: #c2e1fe;
+    position: relative;
+}
 
 
-@media (max-width: 1000px) {
+.banner1-text{
+    padding-left: 6rem;
+    padding-right: 1rem;
+    
+}
+
+.banner1-img{
+    width: 850px;
+}
+
+.banner1 h1{
+    font-family: Helvetica-bold;
+    font-size: 30px;
+    font-weight: 600;
+    width: 400px;
+}
+
+.banner1 p{
+    font-family: Freesans;
+    font-size: 17px;
+    margin: 25px 0;
+    width: 400px;
+}
+
+.btn1{
+    background: #0067bb;
+    color: #fff;
+    font-family: Freesans;
+    padding: 12px 14px;
+    font-size: 14px;
+    margin-right: 24px;
+    border-radius: 2px;
+}
+
+.btn2{
+    font-family: Freesans;
+    font-size: 14px;
+    color: #262626;
+}
+
+.next{
+    width: 12px;
+    margin-left: -5px;
+}
+
+
+
+
+
+
+.banner2{
+    width: 100%;
+    height: 78vh;
+    background-image: url(/image/banner\ img\ 2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+    position: fixed;
+    right: 100%;
+    top: 70px;
+    transition: 0.7s;
+}
+
+.banner2 {
+    right: -100%;
+    top: 70px;
+    transition: 0.8s;
+}
+
+.banner2.active {
+    right: 0;
+}
+
+.banner2-text{
+    padding-top: 150px;
+    padding-left: 6rem;
+    padding-right: 1rem;
+    
+}
+
+.banner2-img{
+    max-width: 850px;
+}
+
+.banner2 h1{
+    font-family: Helvetica-bold;
+    font-size: 30px;
+    font-weight: 600;
+    max-width: 400px;
+}
+
+.banner2 p{
+    font-family: Freesans;
+    font-size: 17px;
+    margin: 25px 0;
+    max-width: 400px;
+}
+
+.btn3{
+    background: #0067bb;
+    color: #fff;
+    font-family: Freesans;
+    padding: 12px 14px;
+    font-size: 14px;
+    margin-right: 24px;
+    border-radius: 2px;
+}
+
+
+.btns img{
+    width: 18px;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+@media (max-width: 1024px) and (min-width: 859px) {
+    .search-resp a{
+        display: none;
+    }
+    .navbar {
+        padding: 0 1.7rem;
+    }
+    .banner1{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        background-color: transparent;
+    }
+    .banner1-text{
+        padding: 2rem 0 2rem 1.7rem;
+        background-color: #fff;
+        border: 1px solid #9f9f9f;
+        margin: 0 0.7rem;
+        position: relative;
+        bottom: 2rem;
+    }
+    .banner1-img{
+        width: 1030px;
+    }
+    .banner1 p, .banner1 h1{
+        width: 975px;
+    }
+    
+
+    .banner2{
+        height: 50vh;
+    }
+}
+
+
+@media (max-width: 859px) {
     .hambuger {
         display: block;
     }
@@ -168,15 +391,18 @@ a {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 55px;
         flex-direction: column;
         gap: 1rem;
         margin-top: 1rem;
-        padding-bottom: 1rem;
+        padding: 1rem 1rem 1rem 3rem;
         width: 100%;
         height: 100vh;
         transition: 0.3s;
         background-color: #ececec;
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .nav-menu.active {
@@ -193,6 +419,14 @@ a {
     }
 
     .drop-down-header{
+        display: none;
+    }
+
+    .nav-left-reponsiveness{
+        display: flex;
+    }
+
+    .nav-right a{
         display: none;
     }
 
