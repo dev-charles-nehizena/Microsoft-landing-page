@@ -22,10 +22,12 @@ let previous = document.querySelector(".previous-btn")
 let  next = document.querySelector(".next-btn");
 let banner2 = document.querySelector(".banner2");
 let banner1 = document.querySelector(".banner1")
+let banner3 = document.querySelector(".banner2e")
 
 next.addEventListener("click", () => {
     next.classList.toggle("active");
     banner2.classList.toggle("active");
+    banner3.classList.toggle("active");
 })
 
 
